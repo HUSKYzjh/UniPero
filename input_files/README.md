@@ -1,16 +1,13 @@
-# 中文说明
+# Input templates
 
-本目录提供 DeepMD-kit 或 ABACUS 的可复用输入模板和计算资源。请复制到具体作业目录后再修改，避免改变仓库中的基准模板。
+This directory provides reference input files for UniPero workflows: the DeepMD-kit training template and ABACUS orbital/pseudopotential resources.
+
+Copy and adapt these templates in a run directory rather than modifying the distributed originals.
 
 ---
 
-# English documentation
+# 输入模板
 
-# Input templates
+本目录为 UniPero 工作流提供参考输入文件：DeepMD-kit 训练模板以及 ABACUS 轨道/赝势资源。
 
-Reference input files used to construct or document UniPero workflows.
-
-- `deepmdkit/input.json`: DeepMD training configuration template.
-- `abacus/`: ABACUS numerical orbitals and SG15 pseudopotentials.
-
-These are templates/resources, not job-specific generated inputs.  Copy and adapt them in a run directory rather than modifying the distributed originals.
+应在运行目录中复制并调整这些模板，而不是修改分发的原始文件。

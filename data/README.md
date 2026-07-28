@@ -1,18 +1,13 @@
-# 中文说明
+# Data workflows
 
-本目录是 UniPero 工作流的一部分。其用途、输入、输出、依赖和运行步骤见下方英文说明；运行前请从父目录 README 确认工作流顺序及文件副作用。
+This directory contains the UniPero workflow families: Task I evaluates prepared data, Task II generates and evaluates new reference data, fitting performs broad validation, and phase-transition studies process temperature-dependent simulations.
+
+Run scripts from their documented working directories. Several scripts create, move, or rename files in place, so use a disposable working copy for exploratory work.
 
 ---
 
-# English documentation
+# 数据工作流
 
-# Data workflows
+本目录包含 UniPero 的工作流类别：Task I 评估已准备数据，Task II 生成并评估新的参考数据，fitting 执行广泛验证，phase-transition 研究并处理温度相关模拟。
 
-This directory contains the three major UniPero workflows.
-
-- `Task-I/`: evaluate the supplied DeepMD graph against prepared reference data at multiple compositions and temperatures.
-- `Task-II/`: launch LAMMPS trajectories, extract configurations, run ABACUS single-point calculations, convert the results to DeepMD data, and evaluate the graph.
-- `fitting/`: organize the broad reference database by chemical complexity and calculate energy/force errors.
-- `phase-transition/`: run LAMMPS phase-transition studies and derive polarization/structural observables.
-
-All scripts assume they are executed from their own documented directory.  They create or move files in-place, so use a disposable copy for exploratory runs.
+请在各脚本说明的工作目录中运行脚本。多个脚本会在原地创建、移动或重命名文件，因此探索性工作应使用可丢弃的工作副本。
