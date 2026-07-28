@@ -1,3 +1,14 @@
+# =============================================================================
+# UniPero script: prepare.sh
+# Purpose: Distribute the baseline DeepMD graph and remote-job templates into workflow directories, then expand the fitting database.
+# Inputs: Run from the repository root after confirming model/graph.pb, json/*.json, and database.zip are present.
+# Outputs: Copies graph.pb/job templates and expands data/fitting/database.zip; existing copied files may be replaced.
+# Run: bash prepare.sh
+# Dependencies: Bash, cp, unzip.
+# Side effects: Changes workflow directories and expands a large archive in-place.
+# This documentation describes the existing workflow; it does not alter calculation parameters.
+# =============================================================================
+
 %%bash
 #copy dpmodel
 cd model

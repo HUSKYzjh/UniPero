@@ -1,4 +1,15 @@
 #!/usr/bin/env python
+"""
+UniPero script: data/phase-transition/graph/plot-isotropy.py
+Purpose: Create the phase-transition isotropy/polarization plot using the repository style sheet.
+Inputs: Processed temperature-series data and nature.mplstyle.
+Outputs: Publication-style figure file(s).
+Run: python plot-isotropy.py
+Dependencies: Python 3, NumPy, and Matplotlib.
+Side effects: Writes figure output in the plotting working directory.
+This documentation describes the existing workflow; it does not alter calculation parameters.
+"""
+
 import numpy as np
 import matplotlib as mpl
 import matplotlib.pyplot as plt

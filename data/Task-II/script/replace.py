@@ -1,3 +1,14 @@
+"""
+UniPero script: data/Task-II/script/replace.py
+Purpose: Replace DeepMD TYPE_n placeholders in POSCAR with the repository chemical-element mapping.
+Inputs: POSCAR containing TYPE_0 through TYPE_14 labels.
+Outputs: Updated POSCAR with element symbols.
+Run: python replace.py
+Dependencies: Python 3 standard library.
+Side effects: Overwrites POSCAR in-place.
+This documentation describes the existing workflow; it does not alter calculation parameters.
+"""
+
 
 file_path = "./POSCAR"
 

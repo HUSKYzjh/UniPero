@@ -1,4 +1,15 @@
 #!/bin/bash
+# =============================================================================
+# UniPero script: data/Task-II/TaskII-evst.sh
+# Purpose: Prepare Task II energy-versus-time files from per-case DeepMD test outputs.
+# Inputs: Completed dptest-*.e.out files.
+# Outputs: energy-vs-time/ with renamed and indexed outputs.
+# Run: bash TaskII-evst.sh
+# Dependencies: Bash, sed, and awk.
+# Side effects: Creates and renames files in energy-vs-time/.
+# This documentation describes the existing workflow; it does not alter calculation parameters.
+# =============================================================================
+
 
 CURRENT=`pwd`
 mkdir energy-vs-time

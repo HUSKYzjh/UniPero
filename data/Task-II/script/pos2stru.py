@@ -1,4 +1,15 @@
 #!/usr/bin/env python
+"""
+UniPero script: data/Task-II/script/pos2stru.py
+Purpose: Convert POSCAR to ABACUS STRU and copy the required pseudopotential and orbital files.
+Inputs: POSCAR plus the relative orb/ resource trees.
+Outputs: STRU and selected *.upf/*.orb files in the current frame directory.
+Run: python pos2stru.py [POSCAR]
+Dependencies: Python 3, ABACUS resource files, and Unix cp.
+Side effects: Writes STRU and copies resources into the working directory.
+This documentation describes the existing workflow; it does not alter calculation parameters.
+"""
+
 import os,sys,glob
 
 peseudpath = '../../../orb/SG15_v1.0_Pseudopotential/SG15_ONCV_v1.0_upf'

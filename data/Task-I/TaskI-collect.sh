@@ -1,3 +1,14 @@
+# =============================================================================
+# UniPero script: data/Task-I/TaskI-collect.sh
+# Purpose: Collect Task I dp test outputs and compute energy and force error summaries.
+# Inputs: Completed dptest-*.e.out and dptest-*.f.out files for all systems.
+# Outputs: collect/energy and collect/force summaries, including EN/MAE/Force outputs.
+# Run: bash TaskI-collect.sh
+# Dependencies: Bash, sed, Python 3, and sufficient stack memory.
+# Side effects: Creates and reorganizes collect/ data in-place.
+# This documentation describes the existing workflow; it does not alter calculation parameters.
+# =============================================================================
+
 mkdir collect
 cd collect
 mkdir energy force

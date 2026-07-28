@@ -1,3 +1,14 @@
+"""
+UniPero script: data/Task-I/script/AIMD-force-fitting.py
+Purpose: Read Task I force comparisons and prepare force-fitting/error analysis data.
+Inputs: Task I force test outputs in the expected local layout.
+Outputs: Derived force comparison/fit data.
+Run: python AIMD-force-fitting.py
+Dependencies: Python 3 and the libraries imported by the script.
+Side effects: Writes derived analysis files in the current directory.
+This documentation describes the existing workflow; it does not alter calculation parameters.
+"""
+
 import os
 import matplotlib.pyplot as plt
 

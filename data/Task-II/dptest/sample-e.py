@@ -1,3 +1,14 @@
+"""
+UniPero script: data/Task-II/dptest/sample-e.py
+Purpose: Calculate relative-energy pairs and mean absolute energy error from numbered DeepMD test outputs.
+Inputs: 000.e.out through 115.e.out with DFT and model energy columns.
+Outputs: EN (relative-energy pairs) and MAE (meV/atom summary).
+Run: python sample-e.py
+Dependencies: Python 3 and standard library.
+Side effects: Overwrites EN and MAE in the working directory.
+This documentation describes the existing workflow; it does not alter calculation parameters.
+"""
+
 import math
 
 LS = 20000

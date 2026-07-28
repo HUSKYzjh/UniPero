@@ -1,4 +1,15 @@
 #!/bin/bash
+# =============================================================================
+# UniPero script: data/Task-I/script/sort.sh
+# Purpose: Rename force output files into the zero-padded sequence expected by sample-f.py.
+# Inputs: Unordered *.f.out files in the current directory.
+# Outputs: 000.f.out, 001.f.out, and subsequent renamed files.
+# Run: bash sort.sh
+# Dependencies: Bash.
+# Side effects: Renames every matching force output file in-place.
+# This documentation describes the existing workflow; it does not alter calculation parameters.
+# =============================================================================
+
 
 count=0
 

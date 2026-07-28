@@ -1,3 +1,14 @@
+# =============================================================================
+# UniPero script: data/Task-II/TaskII-fit.sh
+# Purpose: Download Task II trajectories, generate ABACUS input frames, and dispatch ABACUS calculations.
+# Inputs: Completed LAMMPS jobs, case scripts, and ABACUS resource files.
+# Outputs: Frame directories with POSCAR/STRU/INPUT files and dpdispatcher submissions.
+# Run: bash TaskII-fit.sh
+# Dependencies: Bash, lbg, Python 3, dpdata, ABACUS, and dpdispatcher.
+# Side effects: Downloads data, moves trajectory files, creates hundreds of frame directories, and submits jobs.
+# This documentation describes the existing workflow; it does not alter calculation parameters.
+# =============================================================================
+
 
 CURRENT=`pwd`
 
