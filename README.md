@@ -6,8 +6,8 @@ UniPero is a reproducible workflow and data package for training, validating, an
 
 #### Repository map
 
-- `model/`: baseline uncompressed frozen graph, `graph.pb`.
-- `compressed.pb`: latest inference model, independently retrained and then compressed; it is not produced by directly compressing `model/graph.pb`.
+- `model/`: DeepMD frozen-model releases: baseline `graph.pb` and independently retrained/compressed `compressed.pb`.
+
 - `data/Task-I/`: validation against prepared DeepMD data sets.
 - `data/Task-II/`: LAMMPS sampling, ABACUS single-point calculations, data conversion, and model testing.
 - `data/fitting/`: model-wide energy/force validation and composition-stratified analysis.
@@ -28,8 +28,8 @@ UniPero 是面向多组元钙钛矿体系 Deep Potential（DeepMD-kit）模型�
 
 #### 仓库结构
 
-- `model/`：基线未压缩冻结图 `graph.pb`。
-- `compressed.pb`：最新推理模型，先独立重新训练、再压缩；它不是由 `model/graph.pb` 直接压缩生成的。
+- `model/`：DeepMD 冻结模型发布目录，包含基线 `graph.pb` 与独立重训后压缩的 `compressed.pb`。
+
 - `data/Task-I/`：基于已准备 DeepMD 数据集的验证。
 - `data/Task-II/`：LAMMPS 采样、ABACUS 单点计算、数据转换和模型测试。
 - `data/fitting/`：全模型能量/力验证和按成分分层的分析。
