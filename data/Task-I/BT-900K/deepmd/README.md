@@ -1,18 +1,13 @@
-# 中文说明
+# deepmd DeepMD data
 
-本目录保存对应材料/温度的 DeepMD-kit 标注数据，同时提供 *.raw 文本表示与 set.000/ NumPy 表示。修改任一表示后必须同步重新生成另一表示，并保持物种映射顺序不变。
+This is the DeepMD-kit labeled-data root for the named composition and temperature. Raw `box`, coordinate, energy, force, virial, and type files are paired with the `set.000` NumPy representation.
+
+Do not change one representation without regenerating the other, and preserve the `type_map.raw` species order required by the frozen model.
 
 ---
 
-# English documentation
+# deepmd DeepMD 数据
 
-# BT-900K DeepMD data
+这是指定成分和温度的 DeepMD-kit 标注数据根目录。原始的 box、坐标、能量、力、virial 和类型文件与 `set.000` NumPy 表示配套存在。
 
-This is the DeepMD-kit labeled-data root for BT at 900K.
-
-- `box.raw`, `coord.raw`, `energy.raw`, `force.raw`, and `virial.raw` are frame-wise text arrays.
-- `type.raw` gives the species index for each atom.
-- `type_map.raw` maps those indices to chemical symbols.
-- `set.000/` contains the equivalent NumPy arrays used by DeepMD-kit.
-
-Do not edit one representation without regenerating the other with dpdata or DeepMD-kit tools.
+不要在未重新生成另一种表示的情况下修改其中一种表示，并应保留冻结模型所需的 `type_map.raw` 物种顺序。

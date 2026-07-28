@@ -1,20 +1,13 @@
-# 中文说明
+# Task II structure-generation scripts
 
-本目录属于 Task II：从 LAMMPS 轨迹生成 ABACUS 计算输入，转换结果为 DeepMD 数据，并汇总模型误差。该流程会创建大量帧目录及远程作业，请先在父目录配置资源。
+These helpers split LAMMPS trajectories, convert dump frames to POSCAR and ABACUS STRU, replace type labels, and dispatch ABACUS tasks.
+
+The parent workflow copies this directory into each case and supplies the job templates, resource files, and trajectory data.
 
 ---
 
-# English documentation
+# 任务 II 结构生成脚本
 
-# Task II structure-generation scripts
+这些辅助工具分割 LAMMPS 轨迹，将 dump 帧转换为 POSCAR 和 ABACUS STRU，替换类型标签，并分发 ABACUS 任务。
 
-These helpers transform LAMMPS trajectories into ABACUS input directories.
-
-- `readdata.py` splits a trajectory into frame files.
-- `dump2pos.py` converts a LAMMPS dump frame to POSCAR.
-- `replace.py` converts DeepMD `TYPE_n` labels to elements in POSCAR.
-- `pos2stru.py` creates ABACUS `STRU`, copies pseudopotentials/orbitals, and preserves coordinates.
-- `dump2lmp.py` converts a dump to a LAMMPS data file.
-- `run.py` dispatches ABACUS tasks with dpdispatcher.
-
-The parent shell workflow copies this directory into each case and supplies `machine.json`, `resource.json`, input templates, and frame data.
+父工作流会将本目录复制到每个算例，并提供作业模板、资源文件和轨迹数据。

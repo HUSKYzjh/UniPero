@@ -1,58 +1,37 @@
-# 中文说明
+# UniPero
 
-UniPero 是面向多组元钙钛矿体系的 Deep Potential（DeepMD-kit）训练、验证与应用工作流及数据包。仓库包含模型文件、训练配置、拟合/验证脚本、LAMMPS 分子动力学流程，以及 ABACUS 计算所需的输入资源。
+UniPero is a reproducible workflow and data package for training, validating, and applying Deep Potential (DeepMD-kit) models to multicomponent perovskite systems. It bundles model artifacts, training configuration, validation helpers, molecular-dynamics workflows, and ABACUS input resources.
+
+## Repository map
+
+- `model/`: baseline uncompressed frozen graph, `graph.pb`.
+- `compressed.pb`: latest inference model, independently retrained and then compressed; it is not produced by directly compressing `model/graph.pb`.
+- `data/Task-I/`: validation against prepared DeepMD data sets.
+- `data/Task-II/`: LAMMPS sampling, ABACUS single-point calculations, data conversion, and model testing.
+- `data/fitting/`: model-wide energy/force validation and composition-stratified analysis.
+- `data/phase-transition/`: temperature-dependent phase-transition simulations and post-processing.
+- `input_files/` and `json/`: training, ABACUS, and remote-submission templates.
+
+## Use and reproducibility
+
+Run workflows in a Linux/HPC environment with Bash, Python 3, LAMMPS, DeepMD-kit, dpdata, dpdispatcher, and ABACUS. Configure job templates before submission. Several legacy scripts move or rename files in place, so run them in a working copy. Validate a model release with a DeepMD-kit version compatible with that artifact and record the `dp test` result.
+
+---
+
+# UniPero
+
+UniPero 是面向多组元钙钛矿体系 Deep Potential（DeepMD-kit）模型训练、验证与应用的可复现工作流和数据包。它包含模型文件、训练配置、验证辅助工具、分子动力学流程以及 ABACUS 输入资源。
 
 ## 仓库结构
 
 - `model/`：基线未压缩冻结图 `graph.pb`。
-- `compressed.pb`：最新独立重训后再压缩的推理模型；它不是由本仓库的 `graph.pb` 直接压缩得到。
-- `data/Task-I/`：利用已准备 DeepMD 数据集进行模型验证。
-- `data/Task-II/`：LAMMPS 采样、ABACUS 单点计算、数据转换与模型测试流程。
-- `data/fitting/`：全模型范围的能量/力误差验证与成分分组分析。
-- `data/phase-transition/`：温度相关相变模拟及后处理。
-- `input_files/` 与 `json/`：训练、ABACUS 和远程提交模板。
+- `compressed.pb`：最新推理模型，先独立重新训练、再压缩；它不是由 `model/graph.pb` 直接压缩生成的。
+- `data/Task-I/`：基于已准备 DeepMD 数据集的验证。
+- `data/Task-II/`：LAMMPS 采样、ABACUS 单点计算、数据转换和模型测试。
+- `data/fitting/`：全模型能量/力验证和按成分分层的分析。
+- `data/phase-transition/`：温度相关相变模拟与后处理。
+- `input_files/` 与 `json/`：训练、ABACUS 与远程提交模板。
 
-## 使用提示
+## 使用与可复现性
 
-在 Linux/HPC 环境中使用 Bash、Python 3、LAMMPS、DeepMD-kit、dpdata、dpdispatcher 与 ABACUS。运行前请按目录内说明配置作业模板；部分旧脚本会在原地移动或重命名文件，建议在工作副本中执行。压缩模型发布前应使用与模型兼容的 DeepMD-kit 版本完成 `dp test` 验证，并记录版本与结果。
-
----
-
-# English documentation
-# UniPero
-
-UniPero is a reproducible workflow and data package for training, validating, and applying a Deep Potential (DeepMD-kit) model to multicomponent perovskite systems.  It bundles the trained inference model, training configuration, fitting/validation helpers, molecular-dynamics workflows, and the input resources required by ABACUS and LAMMPS.
-
-## Repository map
-
-| Path | Role |
-| --- | --- |
-| `model/` | Distributed inference model.  `graph.pb` is the uncompressed DeepMD frozen graph. |
-| `compressed.pb` | Latest compressed inference graph release, provided at the repository root. |
-| `data/Task-I/` | Model evaluation against prepared DeepMD data sets. |
-| `data/Task-II/` | LAMMPS sampling followed by ABACUS single-point calculations and DP testing. |
-| `data/fitting/` | Model-wide energy/force validation and composition-stratified analyses. |
-| `data/phase-transition/` | Temperature-dependent phase-transition simulations and post-processing. |
-| `input_files/` | Reference DeepMD and ABACUS input templates. |
-| `json/` | dpdispatcher/Lebesgue job and machine templates. |
-| `prepare.sh` | Copies the model and job templates into the workflow directories and unpacks the fitting database. |
-
-## Prerequisites
-
-Run these workflows in a Linux/HPC environment with Bash, Python 3, LAMMPS, DeepMD-kit, dpdata, dpdispatcher, ABACUS, and (for remote submission) the `lbg` command-line client.  The job templates target DeepMD-kit 2.1.5 and ABACUS 3.2.3 containers; adapt scheduler, image, and account settings before submitting.
-
-## Quick start
-
-1. Inspect and adapt `json/machine.json` and `json/job.json`; fill in the site/account fields rather than committing credentials.
-2. Place the current frozen graph in `model/graph.pb`.
-3. From the repository root, run `bash prepare.sh`.  This distributes the model and templates and expands `database.zip` for fitting validation.
-4. Select one workflow README under `data/` and run its commands from the documented working directory.
-5. Keep generated trajectories, logs, and large intermediate data out of version control unless they are an intentional release artifact.
-
-## Model artifacts
-
-`model/graph.pb` is the checked-in baseline frozen graph.  `compressed.pb` at the repository root is the latest independently retrained, then compressed inference artifact; it is not derived by directly compressing this repository's `model/graph.pb`.  The baseline graph is retained for provenance.  Validate the compressed model with a compatible DeepMD-kit release before deployment.
-
-## Reproducibility and data conventions
-
-DeepMD raw data use `box.raw`, `coord.raw`, `energy.raw`, `force.raw`, `virial.raw`, `type.raw`, and `type_map.raw`; NumPy sets are kept under `set.000/`.  Script outputs such as `*.e.out`, `*.f.out`, `EN`, `MAE`, and `Force-all` are derived analysis products.  Read the README located beside a script before running it: several legacy scripts reorganize files in-place.
+请在具备 Bash、Python 3、LAMMPS、DeepMD-kit、dpdata、dpdispatcher 和 ABACUS 的 Linux/HPC 环境中运行工作流。提交前配置作业模板。部分旧脚本会在原地移动或重命名文件，因此应在工作副本中运行。请使用与该模型文件兼容的 DeepMD-kit 版本验证模型发布，并记录 `dp test` 结果。

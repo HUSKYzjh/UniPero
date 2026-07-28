@@ -1,11 +1,13 @@
-# 中文说明
+# ABACUS resource set
 
-本目录提供 ABACUS 所需的数值原子轨道或 SG15 赝势资源。文件名以元素符号开头，结构生成脚本依赖当前目录名和相对路径；这些第三方资源应保持原样。
+This directory provides ABACUS numerical orbitals or SG15 pseudopotentials using the same names and layout as the Task II resources.
+
+Select files by element and keep the resource layout synchronized with scripts that reference it.
 
 ---
 
-# English documentation
+# ABACUS 资源集
 
-# DZP orbital resource set
+本目录提供 ABACUS 数值轨道或 SG15 赝势，其名称和布局与 Task II 资源相同。
 
-Element-specific ABACUS `*.orb` numerical orbitals, using the same naming convention as the Task II resource set.  Select orbitals by element and keep the files synchronized with the pseudopotential choice.
+应按元素选择文件，并使资源布局与引用它的脚本保持同步。

@@ -1,17 +1,13 @@
-# 中文说明
+# Phase-transition plotting
 
-本目录属于相变研究工作流。成分目录通常包含 LAMMPS 输入、初始构型、提交脚本和轨迹后处理脚本；执行前请检查温度范围、模型文件与远程作业设置。处理脚本会在原地创建派生数据。
+`plot-isotropy.py` reads processed observables from sibling systems and creates the isotropy/polarization figure. `nature.mplstyle` defines the Matplotlib style and `../graph.sh` is the launcher.
+
+Run this workflow only after every composition has completed `avg-dump` processing; adjust paths and labels when adding a composition.
 
 ---
 
-# English documentation
+# 相变绘图
 
-# Phase-transition plotting
+`plot-isotropy.py` 从同级体系读取已处理的观测量并生成各向同性/极化图。`nature.mplstyle` 定义 Matplotlib 样式，`../graph.sh` 是启动脚本。
 
-This directory converts the processed observables from sibling phase-transition systems into publication-style plots.
-
-- `plot-isotropy.py` reads the processed data and produces the isotropy/polarization figure.
-- `nature.mplstyle` defines the Matplotlib visual style.
-- `../graph.sh` is the launcher.
-
-Run only after the per-system `avg-dump` processing has completed.  Adjust paths and labels in the plotting script when adding a composition.
+只有在每个成分完成 `avg-dump` 处理后才运行此工作流；添加成分时应调整路径和标签。

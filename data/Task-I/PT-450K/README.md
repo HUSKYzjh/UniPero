@@ -1,13 +1,13 @@
-# 中文说明
+# PT-450K reference data
 
-本目录是 Task I 中一个特定成分和温度的参考数据入口。其 deepmd/ 子目录用于对冻结模型进行 dp test 验证；该目录不是独立模拟输入。
+This directory is the Task I entry point for the named composition and temperature. Its `deepmd` child is used by `dp test` to validate the frozen model and is not a standalone simulation input.
+
+Keep the atom ordering and species mapping unchanged because the model depends on this ordering.
 
 ---
 
-# English documentation
+# PT-450K 参考数据
 
-# PT-450K reference data
+本目录是 Task I 中指定成分和温度的入口。其 `deepmd` 子目录由 `dp test` 用于验证冻结模型，并不是独立的模拟输入。
 
-This directory stores the Task I reference data set for PT at 450K.
-
-The `deepmd/` child is a DeepMD-kit labeled data set with both text (`*.raw`) and NumPy (`set.000/*.npy`) representations.  The parent directory is consumed by the Task I validation scripts; it is not a standalone simulation input.  Keep atom ordering and the `type_map.raw` mapping unchanged, because the frozen model depends on that species order.
+应保持原子顺序和物种映射不变，因为模型依赖这一顺序。

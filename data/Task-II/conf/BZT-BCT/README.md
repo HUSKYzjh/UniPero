@@ -1,11 +1,13 @@
-# 中文说明
+# BZT-BCT initial configuration
 
-本目录存放该材料体系的 LAMMPS 初始构型 conf.lmp。TaskII-submit.sh 会将其复制到温度特定的计算目录；替换结构时必须同步核对元素顺序与 DeepMD 类型映射。
+`conf.lmp` is the LAMMPS data file used to start Task II simulations for this material. The parent submit script copies it into each temperature-specific run directory.
+
+Validate species ordering against the LAMMPS input and DeepMD type map before replacing the structure.
 
 ---
 
-# English documentation
+# BZT-BCT 初始构型
 
-# BZT-BCT initial configuration
+`conf.lmp` 是用于启动该材料 Task II 模拟的 LAMMPS 数据文件。父提交脚本将它复制到每个温度特定的运行目录。
 
-`conf.lmp` is the LAMMPS data file used to start Task II simulations for BZT-BCT.  It is copied by `../../TaskII-submit.sh` into each temperature-specific run directory.  Validate species ordering against the LAMMPS input and DeepMD type map before replacing this configuration.
+替换结构前，请根据 LAMMPS 输入和 DeepMD 类型映射验证物种顺序。

@@ -1,18 +1,13 @@
-# 中文说明
+# Fitting helper scripts
 
-本目录属于拟合数据验证流程，用于对 DeepMD 模型的能量和力误差进行按成分/元素数分组的统计。分发脚本会移动目录，运行前请保留原始数据副本。
+`dist{3,4,5,6}.sh` distributes numbered systems into composition groups and `cat{3,4,5,6}.sh` gathers group energy files. `sample-e.py` and `sample-f.py` compute energy and force summaries from numbered `dp test` outputs.
+
+The scripts expect the numbered layout produced by the fitting workflow and may move directories; do not run them against the only copy of the database.
 
 ---
 
-# English documentation
+# 拟合辅助脚本
 
-# Fitting helper scripts
+`dist{3,4,5,6}.sh` 将编号体系分配到成分组中，`cat{3,4,5,6}.sh` 汇集各组能量文件。`sample-e.py` 和 `sample-f.py` 从编号的 `dp test` 输出计算能量和力汇总。
 
-These scripts are called by `../fit-cal.sh`.
-
-- `dist{3,4,5,6}.sh` distributes numbered systems into composition groups.
-- `cat{3,4,5,6}.sh` gathers per-group energy comparison files.
-- `sample-e.py` derives relative-energy pairs and MAE values from numbered `*.e.out` files.
-- `sample-f.py` derives force errors and a force-error histogram from numbered `*.f.out` files.
-
-They expect a numbered file layout produced by `dp test`.  Each distribution script moves matching directories, so do not run it against the only copy of the database.
+这些脚本要求拟合工作流生成的编号布局，并可能移动目录；不要对数据库的唯一副本运行它们。

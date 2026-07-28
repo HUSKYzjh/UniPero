@@ -1,22 +1,13 @@
-# 中文说明
+# KNN phase-transition system
 
-本目录属于相变研究工作流。成分目录通常包含 LAMMPS 输入、初始构型、提交脚本和轨迹后处理脚本；执行前请检查温度范围、模型文件与远程作业设置。处理脚本会在原地创建派生数据。
+This directory is the composition-specific instance of the phase-transition workflow. It contains the LAMMPS starting configuration, simulation input, copied model/job templates, submission helper, and dump-analysis helpers.
+
+Run `cp.sh` to submit the system and `avg-dump.sh` after trajectories are available. Analysis scripts create derived observables in this directory.
 
 ---
 
-# English documentation
+# KNN 相变体系
 
-# KNN phase-transition system
+本目录是相变工作流针对该成分的实例。它包含 LAMMPS 初始构型、模拟输入、复制的模型/作业模板、提交辅助脚本和 dump 分析辅助脚本。
 
-This directory is one composition-specific instance of the phase-transition workflow.
-
-## Inputs
-
-- `conf.lmp`: initial LAMMPS configuration.
-- `input.lammps`: simulation input; review temperature, timestep, run length, and model path.
-- `graph.pb`: DeepMD frozen graph copied by `prepare.sh`.
-- `job.json`: remote LAMMPS job description copied by `prepare.sh`.
-
-## Run and analysis
-
-Run `bash cp.sh` to submit the directory, then `bash avg-dump.sh` after the trajectory is available.  `avg-dump.py` reduces dump-frame data to averaged observables and `sort.py` orders the result for downstream plotting.  Generated logs and dump files are not source data; archive them externally when needed.
+使用 `cp.sh` 提交该体系，并在轨迹可用后运行 `avg-dump.sh`。分析脚本会在本目录创建派生观测量。

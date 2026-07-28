@@ -1,14 +1,13 @@
-# 中文说明
+# Remote-execution templates
 
-本目录包含远程提交的 JSON 模板。请在本地安全地填写项目、账户和资源配置，不要把凭据写入版本库。
+`machine.json` configures dpdispatcher/Lebesgue resources and the ABACUS container; `job.json` defines the LAMMPS container job.
+
+Copy templates to a run directory, populate project/account fields securely, and do not commit credentials or secrets.
 
 ---
 
-# English documentation
+# 远程执行模板
 
-# Remote-execution templates
+`machine.json` 配置 dpdispatcher/Lebesgue 资源和 ABACUS 容器；`job.json` 定义 LAMMPS 容器作业。
 
-- `machine.json` configures dpdispatcher/Lebesgue execution resources and the ABACUS container.
-- `job.json` defines the LAMMPS container job.
-
-Copy these files to a run directory, populate the project/account fields using a local secure mechanism, and verify the image and machine type at the target site.  Do not commit credentials or project secrets.
+应将模板复制到运行目录，安全填写项目/账户字段，并且不要提交凭据或机密。

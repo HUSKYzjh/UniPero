@@ -1,11 +1,13 @@
-# 中文说明
+# DeepMD-kit input template
 
-本目录提供 DeepMD-kit 或 ABACUS 的可复用输入模板和计算资源。请复制到具体作业目录后再修改，避免改变仓库中的基准模板。
+`input.json` defines the model architecture, optimization schedule, loss weights, and training defaults. Replace placeholder systems and batch sizes before training.
+
+Keep the type-map order consistent with all input data and exported frozen graphs.
 
 ---
 
-# English documentation
+# DeepMD-kit 输入模板
 
-# DeepMD-kit input template
+`input.json` 定义模型架构、优化计划、损失权重和训练默认值。训练前应替换占位的体系和批量大小。
 
-`input.json` defines the model architecture, optimization schedule, loss weights, and training defaults.  The placeholder values in `training.systems` and `training.batch_size` must be replaced with valid data paths and batch sizes before training.  The type-map order must remain consistent with all input data and exported frozen graphs.
+应使类型映射顺序与所有输入数据和导出的冻结图保持一致。

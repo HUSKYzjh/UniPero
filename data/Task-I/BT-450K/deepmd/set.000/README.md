@@ -1,11 +1,13 @@
-# 中文说明
+# deepmd NumPy set
 
-本目录为对应材料与温度的 DeepMD-kit NumPy 数据集 set.000。ox.npy、coord.npy、energy.npy、orce.npy 与 irial.npy 共享帧维度；元素顺序由父目录的 	ype.raw 和 	ype_map.raw 定义。请通过数据转换工具整体重建，不要手工修改单个数组。
+This is DeepMD-kit set `000` for the named composition and temperature. `box.npy`, `coord.npy`, `energy.npy`, `force.npy`, and `virial.npy` share a common frame axis; the species order is defined by the parent type files.
+
+Treat these arrays as generated data and regenerate the complete set from validated raw data rather than editing individual arrays.
 
 ---
 
-# English documentation
+# deepmd NumPy 数据集
 
-# BT-450K NumPy set
+这是指定成分和温度的 DeepMD-kit 数据集 `000`。`box.npy`、`coord.npy`、`energy.npy`、`force.npy` 和 `virial.npy` 共享相同的帧轴；物种顺序由父目录类型文件定义。
 
-This directory is DeepMD-kit set `000` for BT at 450K.  It contains `box.npy`, `coord.npy`, `energy.npy`, `force.npy`, and `virial.npy` with a common frame axis.  The atom species order is defined by the parent `type.raw` and `type_map.raw` files.  Treat these arrays as generated data: regenerate them from a validated raw-data set instead of editing individual arrays.
+应将这些数组视为生成数据，并从已验证的原始数据重新生成完整数据集，而不是编辑单个数组。

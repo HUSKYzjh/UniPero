@@ -1,18 +1,13 @@
-# 中文说明
+# Task I analysis scripts
 
-本目录是 Task I 中一个特定成分和温度的参考数据入口。其 deepmd/ 子目录用于对冻结模型进行 dp test 验证；该目录不是独立模拟输入。
+This directory provides ABACUS-to-DeepMD conversion, energy/force analysis, plotting, and error-sampling helpers. `sort.sh` renames force outputs into the numbered order expected by `sample-f.py`.
+
+Run the scripts beside the corresponding test outputs or use the parent workflow, which copies them to the expected working directories.
 
 ---
 
-# English documentation
+# 任务 I 分析脚本
 
-# Task I analysis scripts
+本目录提供 ABACUS 到 DeepMD 的转换、能量/力分析、绘图和误差采样辅助工具。`sort.sh` 将力输出重命名为 `sample-f.py` 所需的编号顺序。
 
-- `abmd2dp.py`: converts ABACUS molecular-dynamics data to DeepMD raw and NumPy layouts.
-- `AIMD-force-fitting.py`: analyzes force-reference comparisons.
-- `energy-fitting.py`: analyzes energy-reference comparisons.
-- `plot.py`: plots validation results.
-- `sample-e.py` and `sample-f.py`: calculate relative-energy and force-error summaries from `dp test` outputs.
-- `sort.sh`: renames force output files into the expected numbered order.
-
-Copy these scripts beside the target output files or run the parent workflow, which does this automatically.
+请在相应测试输出旁运行这些脚本，或使用会将它们复制到预期工作目录的父工作流。

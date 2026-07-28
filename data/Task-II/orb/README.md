@@ -1,11 +1,13 @@
-# 中文说明
+# ABACUS basis resources
 
-本目录提供 ABACUS 所需的数值原子轨道或 SG15 赝势资源。文件名以元素符号开头，结构生成脚本依赖当前目录名和相对路径；这些第三方资源应保持原样。
+This directory supplies the numerical-orbital and pseudopotential trees referenced by `script/pos2stru.py`. The resource directory names and relative paths are part of the workflow interface.
+
+Resources are copied into generated calculation directories and should not be modified in place.
 
 ---
 
-# English documentation
+# ABACUS 基组资源
 
-# ABACUS basis resources
+本目录提供 `script/pos2stru.py` 引用的数值轨道和赝势目录树。资源目录名和相对路径是工作流接口的一部分。
 
-This directory supplies the numerical orbital and pseudopotential resource trees referenced by `script/pos2stru.py`.  Keep the directory names stable because that script uses relative paths.  The resources are copied, not modified, when a STRU file is generated.
+资源会复制到生成的计算目录中，不应在原地修改。

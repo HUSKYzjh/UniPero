@@ -1,17 +1,13 @@
-# 中文说明
+# Fitting validation
 
-本目录属于拟合数据验证流程，用于对 DeepMD 模型的能量和力误差进行按成分/元素数分组的统计。分发脚本会移动目录，运行前请保留原始数据副本。
+This workflow evaluates the baseline DeepMD model against the reference database unpacked from `database.zip`. `dp-cal.sh` runs `dp test` for numbered systems; `fit-cal.sh` groups systems by chemical complexity and aggregates energy/force errors.
+
+Run `prepare.sh` first so the model and database are available. Grouping scripts use destructive `mv` operations, so run them on a copy of expanded data.
 
 ---
 
-# English documentation
+# 拟合验证
 
-# Fitting validation
+该工作流使用从 `database.zip` 解压的参考数据库评估基线 DeepMD 模型。`dp-cal.sh` 对编号体系运行 `dp test`；`fit-cal.sh` 按化学复杂度对体系分组并汇总能量/力误差。
 
-This workflow evaluates `model/graph.pb` against the reference database unpacked from `database.zip`.
-
-- `dp-cal.sh` runs `dp test` for each numbered reference system and writes matching energy/force outputs.
-- `fit-cal.sh` groups those systems by the number of chemical elements, invokes the helper scripts in `script/`, and aggregates energy and force error summaries.
-- `script/` contains the grouping, renaming, and sampling helpers.
-
-Run `bash ../../prepare.sh` from the repository root first so the database and model are available.  The scripts use destructive `mv` operations while forming groups; run them on a copy of the expanded data.
+请先运行 `prepare.sh`，以便模型和数据库可用。分组脚本使用具有破坏性的 `mv` 操作，因此应在展开数据的副本上运行。

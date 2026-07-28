@@ -1,18 +1,13 @@
-# 中文说明
+# Task II: trajectory-to-reference workflow
 
-本目录属于 Task II：从 LAMMPS 轨迹生成 ABACUS 计算输入，转换结果为 DeepMD 数据，并汇总模型误差。该流程会创建大量帧目录及远程作业，请先在父目录配置资源。
+Task II generates labeled data through LAMMPS sampling and ABACUS single-point calculations, then evaluates the DeepMD model. The submit, fit, collect, and energy-versus-time scripts implement these four stages.
+
+`conf` stores starting structures, `script` stores generation helpers, `dptest` stores conversion/testing helpers, and `orb` stores ABACUS resources. Configure resources before creating large batches of remote jobs.
 
 ---
 
-# English documentation
+# 任务 II：轨迹到参考数据工作流
 
-# Task II: trajectory-to-reference workflow
+Task II 通过 LAMMPS 采样和 ABACUS 单点计算生成标注数据，然后评估 DeepMD 模型。提交、拟合、收集和能量-时间脚本实现这四个阶段。
 
-Task II generates new labeled data through LAMMPS sampling followed by ABACUS single-point calculations, then evaluates the DeepMD model.
-
-1. `TaskII-submit.sh` creates each composition-temperature case and submits LAMMPS jobs.
-2. `TaskII-fit.sh` downloads trajectories, splits frames, converts LAMMPS dumps to POSCAR/ABACUS STRU input, and submits ABACUS jobs through dpdispatcher.
-3. `TaskII-collect.sh` converts ABACUS outputs to DeepMD data, runs `dp test`, and aggregates errors.
-4. `TaskII-evst.sh` prepares energy-versus-time files.
-
-`conf/` holds initial structures, `script/` holds generation helpers, `dptest/` holds conversion/testing helpers, and `orb/` supplies ABACUS basis resources.
+`conf` 存放初始结构，`script` 存放生成辅助工具，`dptest` 存放转换/测试辅助工具，`orb` 存放 ABACUS 资源。在创建大量远程作业前请配置资源。

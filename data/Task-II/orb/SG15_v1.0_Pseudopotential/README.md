@@ -1,11 +1,13 @@
-# 中文说明
+# ABACUS resource set
 
-本目录提供 ABACUS 所需的数值原子轨道或 SG15 赝势资源。文件名以元素符号开头，结构生成脚本依赖当前目录名和相对路径；这些第三方资源应保持原样。
+This directory contains element-specific ABACUS orbitals or SG15 pseudopotentials. Files are selected by chemical-symbol prefixes and by the relative paths used by the structure-generation workflow.
+
+Treat these as third-party reference resources and keep their names and directory layout unchanged.
 
 ---
 
-# English documentation
+# ABACUS 资源集
 
-# SG15 pseudopotential bundle
+本目录包含元素特定的 ABACUS 轨道或 SG15 赝势。结构生成工作流通过化学符号前缀和相对路径选择文件。
 
-This directory groups the SG15 v1.0 optimized norm-conserving pseudopotentials used by the Task II ABACUS workflow.  The nested `SG15_ONCV_v1.0_upf/` directory is the path expected by `pos2stru.py`.
+应将它们视为第三方参考资源，并保持名称和目录布局不变。
