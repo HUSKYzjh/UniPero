@@ -1,4 +1,4 @@
-# deepmd DeepMD data
+### deepmd DeepMD data
 
 This is the DeepMD-kit labeled-data root for the named composition and temperature. Raw `box`, coordinate, energy, force, virial, and type files are paired with the `set.000` NumPy representation.
 
@@ -6,7 +6,7 @@ Do not change one representation without regenerating the other, and preserve th
 
 ---
 
-# deepmd DeepMD 数据
+### deepmd DeepMD 数据
 
 这是指定成分和温度的 DeepMD-kit 标注数据根目录。原始的 box、坐标、能量、力、virial 和类型文件与 `set.000` NumPy 表示配套存在。
 

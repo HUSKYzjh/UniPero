@@ -1,4 +1,4 @@
-# ABACUS basis resources
+### ABACUS basis resources
 
 This directory supplies the numerical-orbital and pseudopotential trees referenced by `script/pos2stru.py`. The resource directory names and relative paths are part of the workflow interface.
 
@@ -6,7 +6,7 @@ Resources are copied into generated calculation directories and should not be mo
 
 ---
 
-# ABACUS 基组资源
+### ABACUS 基组资源
 
 本目录提供 `script/pos2stru.py` 引用的数值轨道和赝势目录树。资源目录名和相对路径是工作流接口的一部分。
 

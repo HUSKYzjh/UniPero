@@ -1,4 +1,4 @@
-# Task II: trajectory-to-reference workflow
+### Task II: trajectory-to-reference workflow
 
 Task II generates labeled data through LAMMPS sampling and ABACUS single-point calculations, then evaluates the DeepMD model. The submit, fit, collect, and energy-versus-time scripts implement these four stages.
 
@@ -6,7 +6,7 @@ Task II generates labeled data through LAMMPS sampling and ABACUS single-point c
 
 ---
 
-# 任务 II：轨迹到参考数据工作流
+### 任务 II：轨迹到参考数据工作流
 
 Task II 通过 LAMMPS 采样和 ABACUS 单点计算生成标注数据，然后评估 DeepMD 模型。提交、拟合、收集和能量-时间脚本实现这四个阶段。
 

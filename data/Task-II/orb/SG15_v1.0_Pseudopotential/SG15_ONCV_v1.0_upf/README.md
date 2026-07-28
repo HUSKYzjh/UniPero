@@ -1,4 +1,4 @@
-# ABACUS resource set
+### ABACUS resource set
 
 This directory contains element-specific ABACUS orbitals or SG15 pseudopotentials. Files are selected by chemical-symbol prefixes and by the relative paths used by the structure-generation workflow.
 
@@ -6,7 +6,7 @@ Treat these as third-party reference resources and keep their names and director
 
 ---
 
-# ABACUS 资源集
+### ABACUS 资源集
 
 本目录包含元素特定的 ABACUS 轨道或 SG15 赝势。结构生成工作流通过化学符号前缀和相对路径选择文件。
 

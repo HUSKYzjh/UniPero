@@ -1,4 +1,4 @@
-# BST-300K reference data
+### BST-300K reference data
 
 This directory is the Task I entry point for the named composition and temperature. Its `deepmd` child is used by `dp test` to validate the frozen model and is not a standalone simulation input.
 
@@ -6,7 +6,7 @@ Keep the atom ordering and species mapping unchanged because the model depends o
 
 ---
 
-# BST-300K 参考数据
+### BST-300K 参考数据
 
 本目录是 Task I 中指定成分和温度的入口。其 `deepmd` 子目录由 `dp test` 用于验证冻结模型，并不是独立的模拟输入。
 

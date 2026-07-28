@@ -1,4 +1,4 @@
-# KNN phase-transition system
+### KNN phase-transition system
 
 This directory is the composition-specific instance of the phase-transition workflow. It contains the LAMMPS starting configuration, simulation input, copied model/job templates, submission helper, and dump-analysis helpers.
 
@@ -6,7 +6,7 @@ Run `cp.sh` to submit the system and `avg-dump.sh` after trajectories are availa
 
 ---
 
-# KNN 相变体系
+### KNN 相变体系
 
 本目录是相变工作流针对该成分的实例。它包含 LAMMPS 初始构型、模拟输入、复制的模型/作业模板、提交辅助脚本和 dump 分析辅助脚本。
 
