@@ -1,3 +1,14 @@
+"""
+UniPero script: data/Task-II/dptest/abscf2dp.py
+Purpose: Collect ABACUS SCF calculations into one DeepMD raw and NumPy labeled-data set.
+Inputs: Numbered ABACUS SCF directories matching the configured glob.
+Outputs: deepmd/ containing raw files and set.000 NumPy arrays.
+Run: python abscf2dp.py
+Dependencies: Python 3 and dpdata.
+Side effects: Creates or replaces the deepmd/ output directory.
+This documentation describes the existing workflow; it does not alter calculation parameters.
+"""
+
 from dpdata import LabeledSystem, MultiSystems
 from glob import glob
 

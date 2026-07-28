@@ -1,3 +1,14 @@
+# =============================================================================
+# UniPero script: data/Task-II/TaskII-collect.sh
+# Purpose: Convert Task II ABACUS results to DeepMD data, run model tests, and aggregate errors.
+# Inputs: Completed ABACUS SCF directories and graph.pb in each case.
+# Outputs: deepmd data, dptest outputs, and collect/ energy/force summaries.
+# Run: bash TaskII-collect.sh
+# Dependencies: Bash, Python 3, dpdata, DeepMD-kit dp, and sufficient stack memory.
+# Side effects: Creates/renames analysis files and runs model evaluations across all cases.
+# This documentation describes the existing workflow; it does not alter calculation parameters.
+# =============================================================================
+
 
 CURRENT=`pwd`
 

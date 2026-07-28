@@ -1,3 +1,14 @@
+"""
+UniPero script: data/Task-I/script/plot.py
+Purpose: Plot Task I model-validation outputs.
+Inputs: Derived Task I energy/force analysis files.
+Outputs: Validation figure file(s).
+Run: python plot.py
+Dependencies: Python 3 and plotting libraries imported by the script.
+Side effects: Creates or replaces figure outputs.
+This documentation describes the existing workflow; it does not alter calculation parameters.
+"""
+
 import os
 import re
 import matplotlib.pyplot as plt

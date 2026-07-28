@@ -1,3 +1,14 @@
+"""
+UniPero script: data/Task-II/script/readdata.py
+Purpose: Split a LAMMPS trajectory into fixed-size per-frame dump files.
+Inputs: traj.lammpstrj in the current directory.
+Outputs: Zero-padded *.lammpstrj frame files.
+Run: python readdata.py
+Dependencies: Python 3 standard library.
+Side effects: Creates or replaces numbered trajectory fragments.
+This documentation describes the existing workflow; it does not alter calculation parameters.
+"""
+
 import os
 
 # Enter the input and output paths below

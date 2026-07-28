@@ -1,3 +1,14 @@
+"""
+UniPero script: data/Task-II/script/run.py
+Purpose: Create and submit a dpdispatcher batch of ABACUS tasks for numbered frame directories.
+Inputs: machine.json, resource.json, and 0000/ to 0495/ task directories.
+Outputs: Remote dpdispatcher submission and retrieved task outputs.
+Run: python run.py
+Dependencies: Python 3 and dpdispatcher.
+Side effects: Submits remote ABACUS calculations.
+This documentation describes the existing workflow; it does not alter calculation parameters.
+"""
+
 from dpdispatcher import Machine, Resources, Task, Submission
 
 machine = Machine.load_from_json('machine.json')

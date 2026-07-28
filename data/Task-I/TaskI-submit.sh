@@ -1,3 +1,14 @@
+# =============================================================================
+# UniPero script: data/Task-I/TaskI-submit.sh
+# Purpose: Submit DeepMD test calculations for all Task I composition-temperature data sets.
+# Inputs: Prepared Task I data, graph.pb, and configured execution environment.
+# Outputs: Per-system dp test output files or remote submissions.
+# Run: bash TaskI-submit.sh
+# Dependencies: Bash and DeepMD-kit dp.
+# Side effects: Starts calculations across many data sets.
+# This documentation describes the existing workflow; it does not alter calculation parameters.
+# =============================================================================
+
 #source /root/myenv/bin/activate
 
 for i in BST-300K BST-450K BT-300K BT-450K BZT-BCT-300K BZT-BCT-450K NN-BT-300K NN-BT-450K PIN-PMN-PT-300K  PIN-PMN-PT-450K PMN-PT-300K PMN-PT-450K PT-300K PT-450K PZT-300K PZT-450K ST-300K ST-450K ST-900K BST-900K BT-900K BZT-BCT-900K NN-BT-900K PIN-PMN-PT-900K PMN-PT-900K PT-900K PZT-900K KNN-300K KNN-450K KNN-900K

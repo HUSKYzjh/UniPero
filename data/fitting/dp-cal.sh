@@ -1,3 +1,14 @@
+# =============================================================================
+# UniPero script: data/fitting/dp-cal.sh
+# Purpose: Run DeepMD validation for each numbered fitting reference system.
+# Inputs: Expanded fitting database and ../../model/graph.pb.
+# Outputs: Numbered dp test energy and force output files.
+# Run: bash dp-cal.sh
+# Dependencies: Bash and DeepMD-kit dp.
+# Side effects: Runs many long calculations in the current fitting directory.
+# This documentation describes the existing workflow; it does not alter calculation parameters.
+# =============================================================================
+
 cp -r ../../model/graph.pb .
 dp test -m graph.pb -d 000 -n 10000 -s ./init.000-Sr4Ti4O12
 dp test -m graph.pb -d 001 -n 10000 -s ./init.001-Pb8Ti8O24

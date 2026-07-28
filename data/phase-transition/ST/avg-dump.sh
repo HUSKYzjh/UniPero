@@ -1,4 +1,15 @@
 #!/bin/bash
+# =============================================================================
+# UniPero script: data/phase-transition/ST/avg-dump.sh
+# Purpose: Drive dump-file post-processing for one phase-transition composition.
+# Inputs: Completed LAMMPS dump files and sibling avg-dump.py.
+# Outputs: Per-temperature processed observables.
+# Run: bash avg-dump.sh
+# Dependencies: Bash and Python 3.
+# Side effects: Processes available dump files in-place.
+# This documentation describes the existing workflow; it does not alter calculation parameters.
+# =============================================================================
+
 
 CURRENT=`pwd`
 

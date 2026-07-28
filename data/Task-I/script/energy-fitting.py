@@ -1,3 +1,14 @@
+"""
+UniPero script: data/Task-I/script/energy-fitting.py
+Purpose: Read Task I energy comparisons and prepare energy-fitting/error analysis data.
+Inputs: Task I energy test outputs in the expected local layout.
+Outputs: Derived energy comparison/fit data.
+Run: python energy-fitting.py
+Dependencies: Python 3 and the libraries imported by the script.
+Side effects: Writes derived analysis files in the current directory.
+This documentation describes the existing workflow; it does not alter calculation parameters.
+"""
+
 import os
 import matplotlib.pyplot as plt
 

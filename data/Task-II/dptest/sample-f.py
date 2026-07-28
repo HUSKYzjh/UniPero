@@ -1,3 +1,14 @@
+"""
+UniPero script: data/Task-II/dptest/sample-f.py
+Purpose: Calculate force-component errors and a force-error distribution from numbered DeepMD test outputs.
+Inputs: 000.f.out through 115.f.out with DFT and model force columns.
+Outputs: Force-all, Force-error, and distribution-force summaries.
+Run: python sample-f.py
+Dependencies: Python 3 and standard library; sufficient memory for the configured array size.
+Side effects: Overwrites force summaries and may allocate substantial memory.
+This documentation describes the existing workflow; it does not alter calculation parameters.
+"""
+
 import os
 import math
 

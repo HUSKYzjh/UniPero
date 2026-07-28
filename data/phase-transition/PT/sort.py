@@ -1,3 +1,14 @@
+"""
+UniPero script: data/phase-transition/PT/sort.py
+Purpose: Sort processed phase-transition records into a stable temperature order for plotting.
+Inputs: Derived numerical records produced by avg-dump.py.
+Outputs: Sorted analysis output consumed by graphing scripts.
+Run: python sort.py
+Dependencies: Python 3 and NumPy.
+Side effects: Rewrites the sorted derived-data file in the current directory.
+This documentation describes the existing workflow; it does not alter calculation parameters.
+"""
+
 import numpy as np
 
 

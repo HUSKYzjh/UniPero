@@ -1,3 +1,14 @@
+# =============================================================================
+# UniPero script: data/fitting/fit-cal.sh
+# Purpose: Group fitting systems by chemical complexity and aggregate energy/force error analyses.
+# Inputs: Numbered fitting-system directories and helpers in script/.
+# Outputs: Element-count groups plus EN, MAE, Force-all, and force-distribution summaries.
+# Run: bash fit-cal.sh
+# Dependencies: Bash and Python 3.
+# Side effects: Creates directories and moves matching system directories in-place.
+# This documentation describes the existing workflow; it does not alter calculation parameters.
+# =============================================================================
+
 mkdir 3-element 4-element 5-element 6-element 
 cd script
 cp -r dist3.sh cat3.sh sample-e.py ../3-element

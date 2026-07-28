@@ -1,3 +1,14 @@
+# =============================================================================
+# UniPero script: data/Task-II/TaskII-submit.sh
+# Purpose: Create Task II composition-temperature directories and submit LAMMPS sampling jobs.
+# Inputs: conf/*/conf.lmp, script templates, graph.pb, input.lammps, and job.json.
+# Outputs: Per-case working directories, jobid files, and remote LAMMPS submissions.
+# Run: bash TaskII-submit.sh
+# Dependencies: Bash, sed, and lbg.
+# Side effects: Creates directories and submits remote compute jobs.
+# This documentation describes the existing workflow; it does not alter calculation parameters.
+# =============================================================================
+
 
 for j in 300K 450K 900K
 do 

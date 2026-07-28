@@ -1,4 +1,15 @@
 #!/usr/bin/python
+"""
+UniPero script: data/phase-transition/BT/avg-dump.py
+Purpose: Parse LAMMPS dump trajectories and calculate averaged phase-transition observables.
+Inputs: Per-temperature dump files produced by the sibling LAMMPS simulations.
+Outputs: Processed, temperature-resolved structural/polarization data for sorting and plotting.
+Run: python avg-dump.py <temperature-or-dump arguments used by avg-dump.sh>
+Dependencies: Python 3, NumPy, and the expected LAMMPS dump layout.
+Side effects: Creates derived analysis files in the system directory.
+This documentation describes the existing workflow; it does not alter calculation parameters.
+"""
+
 # This script calculates the average structure for a lammps dump file
 # Usage: python x.py input.dump output.xsf
 
