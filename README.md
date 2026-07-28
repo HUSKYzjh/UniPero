@@ -1,5 +1,7 @@
 ### UniPero
 
+This README describes the role, contents, and workflow relationships of this directory within the UniPero repository. It is intended as a reference description; detailed execution behavior remains documented in the scripts and their inline comments.
+
 UniPero is a reproducible workflow and data package for training, validating, and applying Deep Potential (DeepMD-kit) models to multicomponent perovskite systems. It bundles model artifacts, training configuration, validation helpers, molecular-dynamics workflows, and ABACUS input resources.
 
 #### Repository map
@@ -19,6 +21,8 @@ Run workflows in a Linux/HPC environment with Bash, Python 3, LAMMPS, DeepMD-kit
 ---
 
 ### UniPero
+
+本文档说明该目录在 UniPero 仓库中的角色、内容及其与工作流的关系。它定位为参考性说明；具体执行行为仍由脚本及其行内注释详细记录。
 
 UniPero 是面向多组元钙钛矿体系 Deep Potential（DeepMD-kit）模型训练、验证与应用的可复现工作流和数据包。它包含模型文件、训练配置、验证辅助工具、分子动力学流程以及 ABACUS 输入资源。
 
