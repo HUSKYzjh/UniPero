@@ -1,3 +1,11 @@
+# 中文说明
+
+本目录属于 Task II：从 LAMMPS 轨迹生成 ABACUS 计算输入，转换结果为 DeepMD 数据，并汇总模型误差。该流程会创建大量帧目录及远程作业，请先在父目录配置资源。
+
+---
+
+# English documentation
+
 # Task II: trajectory-to-reference workflow
 
 Task II generates new labeled data through LAMMPS sampling followed by ABACUS single-point calculations, then evaluates the DeepMD model.

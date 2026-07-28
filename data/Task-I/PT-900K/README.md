@@ -1,3 +1,11 @@
+# 中文说明
+
+本目录是 Task I 中一个特定成分和温度的参考数据入口。其 deepmd/ 子目录用于对冻结模型进行 dp test 验证；该目录不是独立模拟输入。
+
+---
+
+# English documentation
+
 # PT-900K reference data
 
 This directory stores the Task I reference data set for PT at 900K.
